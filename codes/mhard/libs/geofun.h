@@ -17,7 +17,9 @@ double **combineMat(double **a,double **b,int m,int n)
     double **l;
     int i,j,k=0;
 
-    l=createMat(m,m);
+    l = (double **)malloc(2 * sizeof( *l));
+    for (i=0; i<2; i++)
+         l[i] = (double *)malloc(2 * sizeof( *l[i]));
     for(i=0;i<m;i++)
     {
     for(j=0;j<n;j++)
